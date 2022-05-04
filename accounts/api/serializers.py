@@ -6,10 +6,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('username', 'email')
 
-class LoginSerializer(serializers.Serializer):
-    username = serializers.CharField()
-    password = serializers.CharField()
-
 class SignupSerializer(serializers.ModelSerializer):
     username = serializers.CharField(max_length=20, min_length=6)
     password = serializers.CharField(max_length=20, min_length=6)
@@ -40,4 +36,3 @@ class SignupSerializer(serializers.ModelSerializer):
             email=email,
             password=password,
         )
-        return user
