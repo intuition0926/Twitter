@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'rest_framework',
     'accounts',
+    'tweets',
 ]
 
 STATIC_URL = "static/"
