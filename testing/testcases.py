@@ -12,4 +12,4 @@ class TestCase(DjangoTestCase):
     def create_tweet(self, user, content=None):
         if content is None:
             content = 'default tweet content'
-        return Tweet.objects.create(user, content)
+        return Tweet.objects.create(user=user, content=content)

@@ -22,7 +22,7 @@ class TweetViewSet(viewsets.GenericViewSet,
         tweets = Tweet.objects.filter(user_id=request.query_params['user_id']
         ).order_by('-created_at')
         serializer = TweetSerializer(tweets, many=True)
-        return Response({'tweets':serializer.data})
+        return Response({'tweets': serializer.data})
 
     def create(self, request, *args, **kwargs):
         serializer = TweetSerializerForCreate(
